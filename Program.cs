@@ -10,6 +10,7 @@ namespace Labb_1_Variabler_Och_Input
     {
         static void Main(string[] args)
         {
+            // Här har vi variabler som anger resetidstimmar, minuter och tidszonskillnad. Den meddelar även avgångstiden.
             int resetidtimmar = 7;
             int resetidminut = 25;
             int tidszonskillnad = 6;
@@ -18,11 +19,13 @@ namespace Labb_1_Variabler_Och_Input
             int stockholmavgångstidminut = 03;
             int newyorkavgångstidtimme = 10;
             int newyorkavgångstidminut = 10;
-
+            
+            // For int i detta fall används för att fixa 120 stjärnor.
             for (int i = 0; i < 120; i++)
             {
                 Console.Write("*");
             }
+            // Här så kommer programmet skriva ut välkomstmeddelande och de tre alternativ till användaren.
             Console.Write("\n\n");
             Console.WriteLine("Välkommen till flygtidsberäknaren");
             Console.Write("\n\n");
@@ -33,12 +36,12 @@ namespace Labb_1_Variabler_Och_Input
             Console.Write("Skriv ditt val här:");
             string val = Console.ReadLine();
 
-
+            // Vi använder if-sats för att hantera användarens val.
             if (val == "1")
             {
                 Console.WriteLine("\nDu har valt flyg från Stockholm till New York.\n");
 
-                // Beräkna ankomsttid
+                // Här beräknar vi ankomsttiden
                 int ankomststimme = stockholmavgångstidtimme + resetidtimmar - tidszonskillnad;
                 int ankomstsminut = stockholmavgångstidminut + resetidminut;
 
@@ -94,6 +97,8 @@ namespace Labb_1_Variabler_Och_Input
             else {
                 Console.WriteLine("Det valet finns inte.");
                     }
+            // Här skriver vi ut avslutningsmeddlande till användaren. Den skickar ut oavsett val användaren valt. 
+            
             Console.WriteLine("Nu kommer programmet att stängas ner. Tack för att du använde programmet.(Tryck Enter)");
             Console.ReadLine();
             
