@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace hussein
+namespace Labb_1_Variabler_Och_Input
 {
     internal class Program
     {
